@@ -38,7 +38,7 @@ def youtube_channel(need_description=False):
                 subscribers = "数量不详"
             # description = item.find(name='yt-formatted-string', attrs={"id": "description"}).text
             # print(channel_name, channel_uri, subscribers, video_count, description)
-            channels.append([f"[{channel_name}](https://youtube.com/{channel_uri})", subscribers, video_count])
+            channels.append([f"[{channel_name}](https://youtube.com{channel_uri})", subscribers, video_count])
 
         markdown = make_markdown_table(channels)
         fpm.write(markdown)
